@@ -81,8 +81,8 @@ const Dashboard = () => {
     };
 
     return (
-        <div style={{ padding: '2rem', maxWidth: '1200px', margin: '0 auto', width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
+        <div className="page-container">
+            <div className="dashboard-header">
                 <div>
                     <h1 style={{ fontSize: '2.5rem', fontWeight: 700 }}>Welcome, {dbUser?.name?.split(' ')[0] || 'Player'}</h1>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary-neon)', fontWeight: 600, marginTop: '0.5rem' }}>
@@ -91,7 +91,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                 
-                <div style={{ display: 'flex', gap: '1rem' }}>
+                <div className="header-actions">
                     <button onClick={() => navigate('/leaderboard')} className="btn-primary" style={{ width: 'auto', padding: '0.5rem 1.5rem', fontSize: '0.9rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
                         <FiList size={18} />
                         Leaderboard
@@ -113,13 +113,13 @@ const Dashboard = () => {
                     <AiOutlineLoading3Quarters size={48} color="var(--primary-neon)" className="spin" />
                 </div>
             ) : (
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '2rem', alignItems: 'start' }}>
+                <div className="dashboard-grid">
                     
                     {/* Left Column: Player Search & Selection */}
                     <div className="glass-panel" style={{ padding: '2rem' }}>
                         <h2 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Select Your Player</h2>
                         
-                        <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
+                        <div className="filter-container">
                             <div className="input-group" style={{ flex: 1, marginBottom: 0 }}>
                                 <div style={{ position: 'relative' }}>
                                     <FiSearch size={18} style={{ position: 'absolute', left: '1rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />

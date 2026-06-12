@@ -123,7 +123,7 @@ const MatchArena = () => {
     const themeColor = isWin ? '#00f2fe' : isLoss ? '#ff4757' : '#ffa502';
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', flex: 1, minHeight: '100vh', padding: '2rem' }}>
+        <div className="page-container" style={{ justifyContent: 'center', alignItems: 'center' }}>
             <style>
                 {`
                 @keyframes slideInUp {
@@ -146,7 +146,7 @@ const MatchArena = () => {
                     {matchResult.outcome}
                 </h1>
                 
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '3rem', gap: '2rem' }}>
+                <div className="match-cards-container">
                     
                     {/* USER PLAYER CARD */}
                     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'rgba(0,0,0,0.4)', borderRadius: '16px', padding: '1.5rem', border: `2px solid ${isWin ? themeColor : 'transparent'}` }}>
@@ -204,7 +204,7 @@ const MatchArena = () => {
                     </p>
                 </div>
                 
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '3rem', flexWrap: 'wrap' }}>
+                <div className="stats-container">
                     <div style={{ background: 'rgba(0,0,0,0.4)', padding: '1.5rem', borderRadius: '16px', minWidth: '150px' }}>
                         <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', letterSpacing: '1px' }}>XP CHANGE</div>
                         <div style={{ fontSize: '2.5rem', fontWeight: 700, color: matchResult.xpChange >= 0 ? '#00f2fe' : '#ff4757' }}>

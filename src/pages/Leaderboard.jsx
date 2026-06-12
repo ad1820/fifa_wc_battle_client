@@ -31,8 +31,8 @@ const Leaderboard = () => {
     }, [firebaseUser]);
 
     return (
-        <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+        <div className="page-container" style={{ maxWidth: '800px' }}>
+            <div className="leaderboard-header">
                 <button onClick={() => navigate('/dashboard')} className="btn-outline" style={{ padding: '0.5rem 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <FaArrowLeft /> Lobby
                 </button>
