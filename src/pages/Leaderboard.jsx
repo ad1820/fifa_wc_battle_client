@@ -15,7 +15,7 @@ const Leaderboard = () => {
         const fetchLeaderboard = async () => {
             try {
                 const token = await firebaseUser.getIdToken();
-                const res = await fetch('http://localhost:8000/api/leaderboard', {
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/leaderboard`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 const data = await res.json();

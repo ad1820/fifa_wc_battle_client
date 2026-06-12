@@ -48,7 +48,7 @@ const MatchArena = () => {
                     [chosenAttribute]: player.attributes[chosenAttribute]
                 };
 
-                const response = await fetch('http://localhost:8000/api/match/play', {
+                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/match/play`, {
                     method: 'POST',
                     headers: { 
                         'Authorization': `Bearer ${token}`,

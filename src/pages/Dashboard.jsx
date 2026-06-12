@@ -34,8 +34,8 @@ const Dashboard = () => {
                 const token = await firebaseUser.getIdToken();
                 
                 const [playersRes, cooldownsRes] = await Promise.all([
-                    fetch('http://localhost:8000/api/players', { headers: { 'Authorization': `Bearer ${token}` } }),
-                    fetch('http://localhost:8000/api/user/cooldowns', { headers: { 'Authorization': `Bearer ${token}` } })
+                    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/players`, { headers: { 'Authorization': `Bearer ${token}` } }),
+                    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/user/cooldowns`, { headers: { 'Authorization': `Bearer ${token}` } })
                 ]);
 
                 const playersData = await playersRes.json();
