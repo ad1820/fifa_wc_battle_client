@@ -1,16 +1,59 @@
-# React + Vite
+# FIFA World Cup Battle — Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interactive React client for comparing FIFA World Cup teams and presenting AI-generated match battles.
 
-Currently, two official plugins are available:
+**Live demo:** [fifa-wc-battle-client.vercel.app](https://fifa-wc-battle-client.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Browse and select World Cup teams
+- Create head-to-head team battles
+- Display generated match narratives and results
+- Firebase-backed authentication
+- Client-side routing and responsive interface
+- Separate API service for game logic and persistence
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technology
 
-## Expanding the ESLint configuration
+- React 19
+- Vite
+- React Router
+- Firebase
+- React Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Local development
+
+### Prerequisites
+
+- Node.js 20+
+- npm
+- A Firebase web application
+- A running instance of the [server](https://github.com/ad1820/fifa_wc_battle_server)
+
+### Setup
+
+```bash
+git clone https://github.com/ad1820/fifa_wc_battle_client.git
+cd fifa_wc_battle_client
+npm install
+npm run dev
+```
+
+Configure the Firebase and API values expected by the application in a local `.env` file. Do not commit credentials.
+
+## Scripts
+
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build |
+| `npm run lint` | Run ESLint |
+| `npm run preview` | Preview the production build |
+
+## Related repository
+
+The backend API, authentication verification, persistence, and match-generation services live in [fifa_wc_battle_server](https://github.com/ad1820/fifa_wc_battle_server).
+
+## Status
+
+This project is under active development. Planned improvements include broader tournament data, richer match visualization, automated tests, and expanded accessibility coverage.
